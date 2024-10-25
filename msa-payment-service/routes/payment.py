@@ -21,3 +21,10 @@ async def list_payments(db: Session=Depends(get_db)):
 
     return [PaymentList.model_validate(u) for u in payments]
 
+
+
+@router.get('/payments/stats', response_model=list[PaymentList])
+async def list_payments(db: Session=Depends(get_db)):
+    payments = paymentlist(db)
+
+    return [PaymentList.model_validate(u) for u in payments]

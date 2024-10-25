@@ -13,3 +13,5 @@ class Payment(Base):
     payid = Column(String(30), nullable=False)
     payment = Column(String(50), nullable=False)
     paydate = Column(String(50), nullable=False)
+
+
